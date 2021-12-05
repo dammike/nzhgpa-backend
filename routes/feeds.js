@@ -5,7 +5,7 @@ const Feed = require('../models/Feed');
 
 router.get('/', async (req, res) => {
     const feeds = await Feed.find();
-    response.send(feeds);
+    res.send(feeds);
 });
 
 module.exports = router;
