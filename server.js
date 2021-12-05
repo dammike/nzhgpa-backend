@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const feeds = require('./routes/feeds');
 const pilots = require('./routes/pilots');
 const flyingSites = require('./routes/flyingSites');
+const airs = require('./routes/airs');
 const cors = require('cors');
 
 dotenv.config();
@@ -18,6 +19,7 @@ app.use(cors());
 app.use('/api/feeds', feeds);
 app.use('/api/pilots', pilots);
 app.use('/api/flyingSites', flyingSites);
+app.use('/api/airs', airs);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server up and running on Port: ${PORT}`));
