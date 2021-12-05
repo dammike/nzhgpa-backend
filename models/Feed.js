@@ -6,14 +6,17 @@ const feedSchema = new mongoose.Schema({
     },
     title: {
         type: String,
+        lowercase: true,
         required: true
     },
     description: {
         type: String,
+        lowercase: true,
         required: true
     },
     article: {
-        type: String
+        type: String,
+        lowercase: true,
     },
     navigation: {
         type: String,
